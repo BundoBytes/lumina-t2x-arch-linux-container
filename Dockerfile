@@ -2,7 +2,7 @@ FROM archlinux
 
 EXPOSE 8080
 
-ENV HUGGINGFACE_API_KEY="" PACMAN_FLAGS="--noconfirm --needed" VISUAL=nvim EDITOR=nvim CUDA_HOME=/usr/local/cuda-12.1
+ENV PACMAN_FLAGS="--noconfirm --needed" VISUAL=nvim EDITOR=nvim CUDA_HOME=/usr/local/cuda-12.1
 
 # Configure package managers:
 RUN pacman -Syu $PACMAN_FLAGS \
@@ -44,7 +44,8 @@ RUN python3 -m venv lumina-t2i \
   && pip3 install -U fairscale gradio safetensors wheel torchdiffeq packaging
 RUN source ~/lumina-t2i/bin/activate \
   && pip3 install flash_attn diffusers transformers accelerate \
-  && huggingface-cli login --token hf_xxxx_my_api_key_here_xxx
+  && huggingface-cli login --token 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
+
 
 
 RUN git clone https://github.com/Alpha-VLLM/Lumina-T2X.git \
