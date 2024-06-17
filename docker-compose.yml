@@ -1,0 +1,16 @@
+services:
+  lumina:
+    container_name: lumina_container
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: lumina_image
+
+    volumes:
+      - ..:/home/dev/projects/
+    ports:
+      - '7860:7860'
+    stdin_open: true
+    tty: true
+    devices:
+      - nvidia.com/gpu=all
