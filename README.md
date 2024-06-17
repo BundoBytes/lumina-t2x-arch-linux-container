@@ -1,5 +1,5 @@
-# comfyui-arch-linux-container
-A simple OCI script to launch a container that runs ComfyUI.
+# lumina-t2x-arch-linux-container
+A simple OCI script to launch a container that runs [lumina_next_t2i_mini](https://github.com/Alpha-VLLM/Lumina-T2X/tree/main/lumina_next_t2i_mini).
 
 The script uses podman, but you should be able to replace it with 'docker' to work with Docker instead.
 
